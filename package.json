@@ -1,0 +1,16 @@
+{
+  "name": "nbavis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kenton Huang",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nba": "^4.2.2",
+    "nba.js": "^0.6.1"
+  }
+}
