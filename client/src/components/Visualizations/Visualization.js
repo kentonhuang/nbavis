@@ -18,29 +18,25 @@ const Section = styled.section `
 class Visualization extends Component {
 
 	state = {
-		pts: [Math.random()* 30],
-		reb: [Math.random() * 12],
-		ast: [Math.random() * 10],
-		stl: [Math.random() * 3],
-		blk: [Math.random() * 3],
-		to: [Math.random() * 4],
+		pts: [(Math.random()* 30).toFixed(1)],
+		reb: [(Math.random() * 12).toFixed(1)],
+		ast: [(Math.random() * 10).toFixed(1)],
+		stl: [(Math.random() * 3).toFixed(1)],
+		blk: [(Math.random() * 3).toFixed(1)],
+		to: [(Math.random() * 4).toFixed(1)],
 		currentIndex: null
 	};
 
-	setCurrentIndex = currentIndex =>
-		this.setState({
-			currentIndex
-	});
 	
 	componentDidUpdate(prevProps, prevState) {
 			if (this.props.select.result.playerId !== prevProps.select.result.playerId) {
 				this.setState({
-					pts: [Math.random() * 30],
-						reb: [Math.random() * 12],
-						ast: [Math.random() * 10],
-						stl: [Math.random() * 3],
-						blk: [Math.random() * 3],
-						to: [Math.random() * 4],
+					pts: [(Math.random()* 30).toFixed(1)],
+					reb: [(Math.random() * 12).toFixed(1)],
+					ast: [(Math.random() * 10).toFixed(1)],
+					stl: [(Math.random() * 3).toFixed(1)],
+					blk: [(Math.random() * 3).toFixed(1)],
+					to: [(Math.random() * 4).toFixed(1)],
 				})
 			}
 		// if(prevProps.select.result) {
@@ -66,8 +62,6 @@ class Visualization extends Component {
               height={10}
               x={0}
               y={0}
-              highlightBar={this.setCurrentIndex}
-							highlightedBar={currentIndex}
 							title={'Pts'}
             />
 						</svg>
@@ -79,8 +73,6 @@ class Visualization extends Component {
               height={10}
               x={0}
               y={0}
-              highlightBar={this.setCurrentIndex}
-							highlightedBar={currentIndex}
 							title={'Rebs'}
             />
 						</svg>
@@ -92,8 +84,6 @@ class Visualization extends Component {
               height={10}
               x={0}
               y={0}
-              highlightBar={this.setCurrentIndex}
-							highlightedBar={currentIndex}
 							title={'Ast'}
             />
 						</svg>
@@ -105,8 +95,6 @@ class Visualization extends Component {
               height={10}
               x={0}
               y={0}
-              highlightBar={this.setCurrentIndex}
-							highlightedBar={currentIndex}
 							title={'Stl'}
             />
 						</svg>
@@ -118,8 +106,6 @@ class Visualization extends Component {
               height={10}
               x={0}
               y={0}
-              highlightBar={this.setCurrentIndex}
-							highlightedBar={currentIndex}
 							title={'Blk'}
             />
 						</svg>
@@ -131,8 +117,6 @@ class Visualization extends Component {
               height={10}
               x={0}
               y={0}
-              highlightBar={this.setCurrentIndex}
-							highlightedBar={currentIndex}
 							title={'TOs'}
             />
 						</svg>
