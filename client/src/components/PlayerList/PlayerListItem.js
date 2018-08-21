@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
 import { setSelected } from '../../actions/selectAction';
 

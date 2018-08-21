@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 import _ from 'lodash'
 
 import players from '../../data/players.json';
-import teams from '../../data/teams.json';
 import PlayerListItem from './PlayerListItem';
 
 const Input = styled.input`

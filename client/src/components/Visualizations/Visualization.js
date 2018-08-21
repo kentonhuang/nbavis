@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import styled, {css} from 'styled-components';
+import styled from 'styled-components';
 
-import Test from "./Test";
-import { range as d3Range } from "d3";
+import BarChart from "./BarChart";
 
 const Section = styled.section `
 	width: 1000px;
@@ -24,7 +23,19 @@ class Visualization extends Component {
 		stl: [(Math.random() * 3).toFixed(1)],
 		blk: [(Math.random() * 3).toFixed(1)],
 		to: [(Math.random() * 4).toFixed(1)],
-		currentIndex: null
+		currentIndex: null,
+
+		domain: {
+			ptsDomain: 30,
+			rebDomain: 12,
+			astDomain: 15,
+			stlDomain: 4,
+			blkDomain: 4,
+			toDomain: 4,
+		},
+
+		barWidth: 900,
+		barHeight: 10,
 	};
 
 	
@@ -48,79 +59,65 @@ class Visualization extends Component {
 
 	render() {
 
-		const { pts, reb, ast, stl, blk, to, currentIndex } = this.state;
+		const { pts, reb, ast, stl, blk, to, barHeight, barWidth, domain } = this.state;
 
 		// WILL REFACTOR || TESTING CODE
 		return (
 			<Section>
-				<g style={{display: 'block'}}>
 					<svg style={{width: '100%', height:'50px'}}>
-            <Test
+            <BarChart
 							data={pts}
-							domain={30}
-              width={900}
-              height={10}
-              x={0}
-              y={0}
+							domain={domain.ptsDomain}
+              width={barWidth}
+              height={barHeight}
 							title={'Pts'}
             />
 						</svg>
 						<svg style={{width: '100%', height:'50px'}}>
-							<Test
+							<BarChart
 							data={reb}
-							domain={15}
-              width={900}
-              height={10}
-              x={0}
-              y={0}
+							domain={domain.rebDomain}
+              width={barWidth}
+              height={barHeight}
 							title={'Rebs'}
             />
 						</svg>
 						<svg style={{width: '100%', height:'50px'}}>
-							<Test
+							<BarChart
 							data={ast}
-							domain={12}
-              width={900}
-              height={10}
-              x={0}
-              y={0}
+							domain={domain.astDomain}
+              width={barWidth}
+              height={barHeight}
 							title={'Ast'}
             />
 						</svg>
 						<svg style={{width: '100%', height:'50px'}}>
-							<Test
+							<BarChart
 							data={stl}
-							domain={4}
-              width={900}
-              height={10}
-              x={0}
-              y={0}
+							domain={domain.stlDomain}
+              width={barWidth}
+              height={barHeight}
 							title={'Stl'}
             />
 						</svg>
 						<svg style={{width: '100%', height:'50px'}}>
-							<Test
+							<BarChart
 							data={blk}
-							domain={4}
-              width={900}
-              height={10}
-              x={0}
-              y={0}
+							domain={domain.blkDomain}
+              width={barWidth}
+              height={barHeight}
 							title={'Blk'}
             />
 						</svg>
 						<svg style={{width: '100%', height:'50px'}}>
-							<Test
+							<BarChart
 							data={to}
-							domain={4}
-              width={900}
-              height={10}
-              x={0}
-              y={0}
+							domain={domain.toDomain}
+              width={barWidth}
+              height={barHeight}
 							title={'TOs'}
             />
 						</svg>
-				</g>
 			</Section>
 		);
 	}
