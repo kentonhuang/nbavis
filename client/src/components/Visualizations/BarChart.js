@@ -1,12 +1,12 @@
 import React from "react";
 import * as d3 from "d3";
 import chroma from "chroma-js";
-import styled from 'styled-components';
+import NodeGroup from 'react-move/NodeGroup';
 
 import BarChartBar from './BarChartBar';
+import BarChartAverageBar from './BarChartAverageBar';
 import Axis from './Axis';
 import BarChartLabel from './BarChartLabel';
-import BarChartToolTip from './BarChartToolTip';
 
 class BarChart extends React.Component {
 
@@ -22,13 +22,15 @@ class BarChart extends React.Component {
 			.range([0, this.props.height]),
 			
 		hover: false,
+		hoverAvg: false,
+		hoverLeague: false,
+		hoverPos: false,
+		toolTipData: '0',
 
 		translate: `translate(50, ${this.props.height})`,
 		x: 0,
 		y: 0,
 	};
-
-  color = chroma.scale('OrRd').domain([1,0]);
 
   static getDerivedStateFromProps(nextProps, prevState) {
     let { widthScale, heightScale } = prevState;
@@ -46,35 +48,94 @@ class BarChart extends React.Component {
 		})
 	}
 
-	moveToolTip(e) {
+	setHoverAvg(bool) {
 		this.setState({
-			x: e.nativeEvent.offsetX,
-			y: e.nativeEvent.offsetY,
+			hoverAvg: bool
 		})
 	}
 
+	setHoverLeague(bool) {
+		this.setState({
+			hoverLeague: bool
+		})
+	}
+
+	setHoverPos(bool) {
+		this.setState({
+			hoverPos: bool
+		})
+	}
+
+	moveToolTip = (e, data, type, bool) => {
+		const hover = bool;
+		this.props.toolTipCallBack(e, data, type, hover);
+	}
+
   render() {
-    const { title, data, height } = this.props,
+
+		const color = chroma.scale('OrRd').domain([1, 0]);
+		
+    const { title, data, height, leagueHigh } = this.props,
 			{ widthScale, heightScale } = this.state;
 
     return (
 			<g style={{transform: 'translate(0,0)', position: 'relative'}}>
-					{data.map((d, i) => (
+			{/* league High */}
+				<BarChartAverageBar 
+					d={leagueHigh}
+					type={'leagueAvg'}
+					heightScale={heightScale}
+					widthScale={widthScale}
+					height={30}
+					x={50}
+					y={0}
+					fillColor={this.state.hoverLeague}
+					colors={{color1: '#E8E8E8', color2: '#c7c7c7'}}
+					onMouseLeave={(e, data, type, bool) => {
+						this.setHoverLeague(false)
+						this.moveToolTip(e, data, type, bool)
+					}}
+					onMouseMove={(e, data, type, bool) => {
+						this.setHoverLeague(true)
+						this.moveToolTip(e, data, type, bool)
+					}}
+				/>
+				<BarChartAverageBar 
+					d={2}
+					type={'posAvg'}
+					heightScale={heightScale}
+					widthScale={widthScale}
+					height={30}
+					x={50}
+					y={0}
+					fillColor={this.state.hoverAvg}
+					colors={{color1: '#D8D8D8', color2: '#c7c7c7'}}
+					onMouseLeave={(e, data, type, bool) => {
+						this.setHoverAvg(false)
+						this.moveToolTip(e, data, type, bool)
+					}}
+					onMouseMove={(e, data, type, bool) => {
+						this.setHoverAvg(true)
+						this.moveToolTip(e, data, type, bool)
+					}}
+				/>
 						<BarChartBar
-							d={d}
+							d={data}
+							type={'playerAvg'}
 							heightScale={heightScale}
 							widthScale={widthScale}
 							x={50}
-							y={heightScale(i) + 10}
+							y={10}
 							fillColor={this.state.hover}
-							onMouseLeave={() => this.setHover(false)}
-							onMouseMove={(e) => {
-								this.moveToolTip(e)
-								this.setHover(true)
+							onMouseLeave={(e, data, type, bool) => {
+								this.setHover(false)
+								this.moveToolTip(e, data, type, bool)
 							}}
-							key={i}
+							onMouseMove={(e, data, type, bool) => {
+								this.setHover(true)
+								this.moveToolTip(e, data, type, bool)
+							}}
 						/>
-					))}
 				<Axis 
 					widthScale={widthScale}
 				/>
@@ -86,12 +147,12 @@ class BarChart extends React.Component {
 							title={title}
 						></BarChartLabel>
 					))}
-				<BarChartToolTip
+				{/* <BarChartToolTip
 					x={this.state.x}
 					y={this.state.y}
-					visible={this.state.hover}
-					value={data[0]}
-				/>
+					visible={this.state.hover || this.state.hoverAvg || this.state.hoverLeague}
+					value={this.state.toolTipData}
+				/> */}
 			</g>
     );
   }
