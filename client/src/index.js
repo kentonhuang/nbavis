@@ -8,9 +8,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-	<Provider store={configureStore}>
-		<App />
-	</Provider>
+  <Provider store={configureStore}>
+    <App />
+  </Provider>
 , document.getElementById('root')
 );
 registerServiceWorker();
