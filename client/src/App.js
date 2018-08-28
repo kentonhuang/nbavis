@@ -4,13 +4,19 @@ import './App.css';
 
 import PlayerList from './components/PlayerList/PlayerList';
 import Visualization from './components/Visualizations/Visualization';
+import CourtVisualization from './components/CourtGraph/CourtVisualization';
 
 class App extends Component {
   render() {
     return (
-			<div>
-				<PlayerList></PlayerList>
-				<Visualization />
+			<div className="container-fluid">
+				<div className="row">
+					<PlayerList></PlayerList>
+					<CourtVisualization></CourtVisualization>
+				</div>
+				<div className="row">
+					<Visualization />
+				</div>
 			</div>
     );
   }

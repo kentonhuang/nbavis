@@ -59,7 +59,7 @@ class PlayerList extends Component {
 
 	render() {
 		return (
-			<Section>
+			<Section className="col-md-3">
 				<Input
 					type="text"
 					placeholder="find player" 

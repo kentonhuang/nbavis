@@ -5,7 +5,7 @@ const Tooltip = styled.div`
 	position: absolute;
 	text-align: center;
 	width: 60px;
-	height: 28px;
+	height: 30px;
 	padding: 2px;
 	background: #ff9933;
 	border: 0px;
@@ -25,7 +25,7 @@ const TopText = styled.span`
 const BarChartToolTip = (props) => {
 	return (
 		// <foreignObject style={{position: 'relative'}}>
-			<Tooltip x={props.x} y={props.y} visible={props.visible} style={{top: props.y - 30 + 'px', left: props.x - 36 + 'px'}}>
+			<Tooltip x={props.x} y={props.y} visible={props.visible} style={{top: props.y - 34 + 'px', left: props.x - 30 + 'px'}}>
 				<TopText>
 					{props.text}
 				</TopText>
