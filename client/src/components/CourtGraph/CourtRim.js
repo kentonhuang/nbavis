@@ -15,12 +15,12 @@ const CourtRim = (props) => {
       </defs>
 
       <circle 
-        clip-path="url(#restrictedArea)"
+        clipPath="url(#restrictedArea)"
         cx={props.widthScaleCourt(5.5)}
         cy={props.heightScale(25)}
         r={props.scaleFeet(4)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -31,7 +31,7 @@ const CourtRim = (props) => {
         y1={props.heightScale(22)}
         y2={props.heightScale(28)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -41,7 +41,7 @@ const CourtRim = (props) => {
         cy={props.heightScale(25)}
         r={props.scaleFeet(1.5)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}

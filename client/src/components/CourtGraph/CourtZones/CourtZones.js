@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
 
-import CourtBase from './CourtBase';
-import CourtHalfCourt from './CourtHalfCourt';
-import CourtThreePoint from './CourtThreePoint';
-import CourtKey from './CourtKey';
-import CourtRim from './CourtRim';
+import CourtZoneCenter from './CourtZoneCenter/CourtZoneCenter';
+import CourtZoneLeft from './CourtZoneLeft/CourtZoneLeft';
+import CourtZoneRight from './CourtZoneRight/CourtZoneRight';
+import CourtZoneRightCenter from './CourtZoneRightCenter/CourtZoneRightCenter';
+import CourtZoneLeftCenter from './CourtZoneLeftCenter/CourtZoneLeftCenter';
 
-class CourtGraph extends Component {
-
+class CourtZones extends Component {
   state = {
     widthScaleCourt: d3.scaleLinear()
       .domain([0, 47])
@@ -24,38 +23,40 @@ class CourtGraph extends Component {
   }
 
   render() {
-
     const {widthScaleCourt, heightScale, scaleFeet} = this.state
     const {courtWidth, courtHeight} = this.props
-
+    
     return (
       <g>
-        <CourtBase
-          width={courtWidth}
-          height={courtHeight}
-        />
-        <CourtHalfCourt
+        <CourtZoneCenter
           scaleFeet={scaleFeet}
           widthScaleCourt={widthScaleCourt}
           heightScale={heightScale}
           width={courtWidth}
           height={courtHeight}
         />
-        <CourtThreePoint
+        <CourtZoneLeft 
           scaleFeet={scaleFeet}
           widthScaleCourt={widthScaleCourt}
           heightScale={heightScale}
           width={courtWidth}
           height={courtHeight}
         />
-        <CourtKey
+        <CourtZoneRight 
           scaleFeet={scaleFeet}
           widthScaleCourt={widthScaleCourt}
           heightScale={heightScale}
           width={courtWidth}
           height={courtHeight}
         />
-        <CourtRim
+        <CourtZoneLeftCenter 
+          scaleFeet={scaleFeet}
+          widthScaleCourt={widthScaleCourt}
+          heightScale={heightScale}
+          width={courtWidth}
+          height={courtHeight}
+        />
+        <CourtZoneRightCenter 
           scaleFeet={scaleFeet}
           widthScaleCourt={widthScaleCourt}
           heightScale={heightScale}
@@ -67,4 +68,4 @@ class CourtGraph extends Component {
   }
 }
 
-export default CourtGraph;
+export default CourtZones;

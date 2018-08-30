@@ -28,7 +28,7 @@ const CourtKey = (props) => {
         width={props.scaleFeet(19)}
         height={props.heightScale(12)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -40,7 +40,7 @@ const CourtKey = (props) => {
         width={props.scaleFeet(19)}
         height={props.heightScale(16)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -51,10 +51,10 @@ const CourtKey = (props) => {
         cx={props.widthScaleCourt(19)}
         cy={props.heightScale(25)}
         r={props.scaleFeet(6)}
-        clip-path="url(#rightFreeThrow)"
-        stroke-dasharray="10"
+        clipPath="url(#rightFreeThrow)"
+        strokeDasharray="10"
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -64,9 +64,9 @@ const CourtKey = (props) => {
         cx={props.widthScaleCourt(19)}
         cy={props.heightScale(25)}
         r={props.scaleFeet(6)}
-        clip-path="url(#leftFreeThrow)"
+        clipPath="url(#leftFreeThrow)"
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -78,7 +78,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(16)}
         y2={props.heightScale(17)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -89,7 +89,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(33)}
         y2={props.heightScale(34)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -100,7 +100,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(16)}
         y2={props.heightScale(17)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -111,7 +111,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(33)}
         y2={props.heightScale(34)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -122,7 +122,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(16)}
         y2={props.heightScale(17)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -133,7 +133,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(33)}
         y2={props.heightScale(34)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -144,7 +144,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(16)}
         y2={props.heightScale(17)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -155,7 +155,7 @@ const CourtKey = (props) => {
         y1={props.heightScale(33)}
         y2={props.heightScale(34)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />

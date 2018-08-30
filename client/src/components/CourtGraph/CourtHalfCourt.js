@@ -9,7 +9,7 @@ const CourtHalfCourt = (props) => {
       y1={props.heightScale(0)}
       y2={props.heightScale(50)}
       style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
       }}
       ></line>
@@ -19,7 +19,7 @@ const CourtHalfCourt = (props) => {
         cy={props.heightScale(25)}
         r={props.scaleFeet(2)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -30,7 +30,7 @@ const CourtHalfCourt = (props) => {
         cy={props.heightScale(25)}
         r={props.scaleFeet(6)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000',
         fill: 'none'
         }}
@@ -42,7 +42,7 @@ const CourtHalfCourt = (props) => {
         y1={props.heightScale(0)}
         y2={props.heightScale(3)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />
@@ -53,7 +53,7 @@ const CourtHalfCourt = (props) => {
         y1={props.heightScale(47)}
         y2={props.heightScale(50)}
         style={{
-        strokeWidth: '3px',
+        strokeWidth: '1px',
         stroke: '#000000'
         }}
       />

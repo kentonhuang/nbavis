@@ -7,9 +7,9 @@ const CourtBase = (props) => {
         width={props.width}
         height={props.height}
         style={{
-          fill: '#E8AD66',
+          fill: 'none',
           stroke: 'black',
-          strokeWidth: '3px'
+          strokeWidth: '1px'
         }}
       ></rect>
 
