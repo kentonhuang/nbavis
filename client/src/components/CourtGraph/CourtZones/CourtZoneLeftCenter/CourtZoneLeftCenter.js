@@ -25,12 +25,30 @@ const CourtZoneLeftCenter = (props) => {
         d={arc24}
         widthScaleCourt={props.widthScaleCourt}
         heightScale={props.heightScale}
+        zone='Left Center'
+        dist='16-24 Feet'
+        data={props.data['24+']}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
       <CourtZoneThree 
         scaleFeet={props.scaleFeet}
         d={arc3pt}
         widthScaleCourt={props.widthScaleCourt}
         heightScale={props.heightScale}
+        zone='Left Center'
+        dist='24+ Feet'
+        data={props.data['24+']}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
     </g>
   );

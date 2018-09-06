@@ -10,8 +10,24 @@ const CourtZoneCorner = (props) => {
       style={{
         strokeWidth: '3px',
         stroke: '#ccc',
-        fill: 'none',
+        fill: 'green',
       }}
+      onMouseMove={(e) => {
+          props.onMouseMove(e, true, {
+            data: props.data,
+            dist: props.dist,
+            zone: props.zone
+          });
+        }}
+      onMouseLeave = {
+        (e) => {
+          props.onMouseMove(e, false, {
+            data: props.data,
+            dist: props.dist,
+            zone: props.zone
+          });
+        }
+      }
     ></rect>
   );
 };

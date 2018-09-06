@@ -1,15 +1,15 @@
 import React from 'react';
 
-const CourtZoneThree = (props) => {
+const CourtZoneCornerTwo = (props) => {
   return (
-    < g clipPath="url(#clipThree)">
+    < g clipPath="url(#clipTwo)">
       <defs>
-        <clipPath id="clipThree">
+        <clipPath id="clipTwo">
           <rect 
-            x={props.widthScaleCourt(50)}
-            y={props.heightScale(0)}
-            width={props.scaleFeet(35.5)}
-            height={props.heightScale(50)}
+            x={props.widthScaleCourt(17)}
+            y={props.heightScale(3)}
+            width={props.scaleFeet(17)}
+            height={props.heightScale(44)}
           />
         </clipPath>  
       </defs>
@@ -17,7 +17,7 @@ const CourtZoneThree = (props) => {
         style={{
           strokeWidth: '3px',
           stroke: '#ccc',
-          fill: 'purple',
+          fill: 'red',
           }}
         transform = {
           `translate(${props.widthScaleCourt(5.5)},${props.heightScale(25)})`
@@ -41,4 +41,4 @@ const CourtZoneThree = (props) => {
   );
 };
 
-export default CourtZoneThree;
+export default CourtZoneCornerTwo;

@@ -25,6 +25,14 @@ const CourtZoneCenter = (props) => {
     .outerRadius(props.scaleFeet(52))
     .startAngle(Math.PI * -0.4)
     .endAngle(Math.PI * -0.6)
+
+  const paint = d3.arc()
+    .innerRadius(props.scaleFeet(0))
+    .outerRadius(props.scaleFeet(8))
+    .startAngle(Math.PI * 0)
+    .endAngle(Math.PI * 2)
+
+  console.log(props.data);
   
   return (
   
@@ -33,28 +41,73 @@ const CourtZoneCenter = (props) => {
         d={arc15}
         widthScaleCourt={props.widthScaleCourt}
         heightScale={props.heightScale}
+        zone='Center'
+        dist='8-16 Feet'
+        data={props.data['8-16']}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
-      <ZoneCenter0
-        cx={props.widthScaleCourt(5.5)}
-        cy={props.heightScale(25)}
-        r={props.scaleFeet(8)}
+      <CourtZoneArea
+        d={paint}
+        widthScaleCourt={props.widthScaleCourt}
+        heightScale={props.heightScale}
+        zone='Center'
+        dist='0-8 Feet'
+        data={props.data['0-8']}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
       <CourtZoneArea 
         d={arc24}
         widthScaleCourt={props.widthScaleCourt}
         heightScale={props.heightScale}
+        zone='Center'
+        dist='16-24 Feet'
+        data={props.data['24+']}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
       <CourtZoneThree 
         d={arc3pt}
         scaleFeet={props.scaleFeet}
         widthScaleCourt={props.widthScaleCourt}
         heightScale={props.heightScale}
+        zone='Center'
+        dist='24+ Feet'
+        data={props.data['24+']}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
       <CourtZoneCorner 
         x='0'
         y='0'
         width={props.scaleFeet(11.1)}
         height={props.heightScale(50)}
+        zone='Center'
+        dist='47+ Feet'
+        data={props.data2.backCourt}
+        onMouseMove={(e, bool, data) => {
+          props.onMouseMove(e, bool, data);
+        }}
+        onMouseLeave={(e, bool, data) => {
+          props.onMouseLeave(e, bool, data);
+        }}
       />
     </g>
   );
