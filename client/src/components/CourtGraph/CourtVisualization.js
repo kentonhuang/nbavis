@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as d3 from 'd3';
 
 import CourtGraph from './CourtGraph';
 import CourtZones from './CourtZones/CourtZones';
@@ -7,6 +8,7 @@ import CourtToolTip from './CourtToolTip';
 
 import splits from '../../data/shootingsplits.json';
 import players from '../../data/players.json';
+import avgsplits from '../../data/avgsplits.json';
 
 class CourtVisualization extends Component {
 
@@ -116,7 +118,10 @@ class CourtVisualization extends Component {
         data: {}
       },
       hover: false
-    }
+    },
+
+    colors: d3.scaleQuantize().domain([0, 10]).range(d3.schemeReds[3]),
+    colors2: d3.scaleQuantize().domain([0, 10]).range(d3.schemeBlues[3]),
   }
 
   toolTipCallBack = (e, bool, data) => {
@@ -128,7 +133,6 @@ class CourtVisualization extends Component {
         data
       }
     })
-    console.log(data);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -145,9 +149,8 @@ class CourtVisualization extends Component {
 
   render() {
     const {toolTip} = this.state;
-    console.log(toolTip.data.data);
     return (
-      <div className="col-md-8" style={{padding: '30px', position: 'relative'}}>
+      <div style={{paddingLeft: '10px' , position: 'relative', display: 'inline-block'}}>
         <CourtToolTip
           x={toolTip.x}
           y={toolTip.y}
@@ -156,13 +159,16 @@ class CourtVisualization extends Component {
           text2={toolTip.data.dist}
           value={`${toolTip.data.data.made}/${toolTip.data.data.shots} (${toolTip.data.data.percentage}%)`}
         />
-        <svg style={{width: this.state.COURT_WIDTH, height: this.state.COURT_HEIGHT}}>
+        <svg style={{width: '450', height: '400'}} viewBox="0 0 611 500">
         <CourtZones 
           courtWidth={this.state.COURT_WIDTH}
           courtHeight={this.state.COURT_HEIGHT}
           halfCourtLine={Math.round(this.state.COURT_WIDTH * .2308)}
           stats={this.state.stats}
           toolTipCallBack={this.toolTipCallBack}
+          colors={this.state.colors}
+          colors2={this.state.colors2}
+          leagueAvgStats={avgsplits[0]}
         />
         <CourtGraph
           courtWidth={this.state.COURT_WIDTH}

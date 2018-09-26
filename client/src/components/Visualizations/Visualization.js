@@ -6,13 +6,11 @@ import BarChart from "./BarChart";
 import BarChartToolTip from './BarChartToolTip';
 
 const Section = styled.section `
-  width: 1000px;
-  height: 400px;
-  margin-top: 30px;
-  margin-left: 40px;
+  width: 1050px;
+  height: 350px;
   display: inline-block;
   background-color: #eeeeee
-  padding: 50px;
+  padding: 20px;
 `
 
 class Visualization extends Component {
@@ -35,7 +33,7 @@ class Visualization extends Component {
     },
 
     domain: {
-      ptsDomain: 32,
+      ptsDomain: 35,
       rebDomain: 16,
       astDomain: 12,
       stlDomain: 3,
@@ -43,7 +41,7 @@ class Visualization extends Component {
       toDomain: 5,
     },
 
-    barWidth: 900,
+    barWidth: 950,
     barHeight: 10,
     barHeightAvg: 30,
 

@@ -9,10 +9,11 @@ const List = styled.li `
     text-align: center;
     padding: 8px;  
     list-style: none;
-    color: #aaa;
+    color: #fff;
     user-select: none;
     transition: all 150ms ease-in;
-    border: 1px solid #F8F8F8
+    border: 1px solid #F8F8F8;
+    background-color: #222;
 
     &:hover{
       background-color: #dddddd;

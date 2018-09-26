@@ -18,6 +18,8 @@ const CourtZoneLeft = (props) => {
     .startAngle(Math.PI * 0.5)
     .endAngle(Math.PI * -0.16)
 
+    console.log(props);
+
   return (
     <g>
       <CourtZoneArea
@@ -27,6 +29,9 @@ const CourtZoneLeft = (props) => {
         zone='Left'
         dist='8-16 Feet'
         data={props.data['8-16']}
+        leagueAvgStats={props.leagueAvgStats['8-16']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -39,6 +44,9 @@ const CourtZoneLeft = (props) => {
         zone='Left'
         dist='16-24 Feet'
         data={props.data['16-24']}
+        leagueAvgStats={props.leagueAvgStats['16-24']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -48,12 +56,15 @@ const CourtZoneLeft = (props) => {
       />
       <CourtZoneCorner 
         x={props.widthScaleCourt(14.5)}
-        y={props.heightScale(0)}
+        y={props.heightScale(0.1)}
         width={props.scaleFeet(14.5)}
-        height={props.heightScale(3)}
+        height={props.heightScale(2.9)}
         zone='Left'
         dist='24+ Feet'
         data={props.data['24+']}
+        leagueAvgStats={props.leagueAvgStats['24+']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}

@@ -24,8 +24,8 @@ class CourtZones extends Component {
 
   render() {
     const {widthScaleCourt, heightScale, scaleFeet} = this.state
-    const {courtWidth, courtHeight, stats} = this.props
-    console.log(this.props);
+    const {courtWidth, courtHeight, stats, colors, colors2, leagueAvgStats} = this.props
+
     return (
       <g>
         <CourtZoneCenter
@@ -36,6 +36,9 @@ class CourtZones extends Component {
           height={courtHeight}
           data={stats.splits.center}
           data2={stats.splits.backCourt}
+          leagueAvgStats={leagueAvgStats.center}
+          colors={colors}
+          colors2={colors2}
           onMouseMove={(e, bool, data) => {
             this.props.toolTipCallBack(e, bool, data);
           }}
@@ -50,6 +53,9 @@ class CourtZones extends Component {
           width={courtWidth}
           height={courtHeight}
           data={stats.splits.left}
+          leagueAvgStats={leagueAvgStats.left}
+          colors={colors}
+          colors2={colors2}
           onMouseMove={(e, bool, data) => {
             this.props.toolTipCallBack(e, bool, data);
           }}
@@ -64,6 +70,9 @@ class CourtZones extends Component {
           width={courtWidth}
           height={courtHeight}
           data={stats.splits.right}
+          leagueAvgStats={leagueAvgStats.right}
+          colors={colors}
+          colors2={colors2}
           onMouseMove={(e, bool, data) => {
             this.props.toolTipCallBack(e, bool, data);
           }}
@@ -78,6 +87,9 @@ class CourtZones extends Component {
           width={courtWidth}
           height={courtHeight}
           data={stats.splits.leftCenter}
+          leagueAvgStats={leagueAvgStats.leftCenter}
+          colors={colors}
+          colors2={colors2}
           onMouseMove={(e, bool, data) => {
             this.props.toolTipCallBack(e, bool, data);
           }}
@@ -92,6 +104,9 @@ class CourtZones extends Component {
           width={courtWidth}
           height={courtHeight}
           data={stats.splits.rightCenter}
+          leagueAvgStats={leagueAvgStats.rightCenter}
+          colors={colors}
+          colors2={colors2}
           onMouseMove={(e, bool, data) => {
             this.props.toolTipCallBack(e, bool, data);
           }}

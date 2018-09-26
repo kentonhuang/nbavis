@@ -31,8 +31,6 @@ const CourtZoneCenter = (props) => {
     .outerRadius(props.scaleFeet(8))
     .startAngle(Math.PI * 0)
     .endAngle(Math.PI * 2)
-
-  console.log(props.data);
   
   return (
   
@@ -44,6 +42,9 @@ const CourtZoneCenter = (props) => {
         zone='Center'
         dist='8-16 Feet'
         data={props.data['8-16']}
+        leagueAvgStats={props.leagueAvgStats['8-16']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -58,6 +59,9 @@ const CourtZoneCenter = (props) => {
         zone='Center'
         dist='0-8 Feet'
         data={props.data['0-8']}
+        leagueAvgStats={props.leagueAvgStats['0-8']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -71,7 +75,10 @@ const CourtZoneCenter = (props) => {
         heightScale={props.heightScale}
         zone='Center'
         dist='16-24 Feet'
-        data={props.data['24+']}
+        data={props.data['16-24']}
+        leagueAvgStats={props.leagueAvgStats['16-24']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -87,6 +94,9 @@ const CourtZoneCenter = (props) => {
         zone='Center'
         dist='24+ Feet'
         data={props.data['24+']}
+        leagueAvgStats={props.leagueAvgStats['24+']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -102,6 +112,9 @@ const CourtZoneCenter = (props) => {
         zone='Center'
         dist='47+ Feet'
         data={props.data2.backCourt}
+        leagueAvgStats={props.leagueAvgStats['backCourt']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}

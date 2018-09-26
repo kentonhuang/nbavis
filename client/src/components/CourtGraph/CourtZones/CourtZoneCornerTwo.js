@@ -1,6 +1,30 @@
 import React from 'react';
 
 const CourtZoneCornerTwo = (props) => {
+  console.log(props);
+  const { colors, colors2 } = props;
+  let color;
+
+  const percentage = parseInt(props.data.percentage);
+  const lgFg = props.leagueAvgStats.fgPct;
+  
+  console.log(percentage);
+
+  if (props.data.shots > 0) {
+    if (percentage === 0) {
+      color = colors2(10);
+    }
+      else if (percentage < lgFg) {
+      color = colors2(lgFg % percentage)
+    } else if (percentage > lgFg) {
+      color = colors(percentage % lgFg)
+    } 
+  } else {
+    color = '#ffffff';
+  }
+
+  console.log(color);
+
   return (
     < g clipPath="url(#clipTwo)">
       <defs>
@@ -17,7 +41,7 @@ const CourtZoneCornerTwo = (props) => {
         style={{
           strokeWidth: '3px',
           stroke: '#ccc',
-          fill: 'red',
+          fill: `${color}`
           }}
         transform = {
           `translate(${props.widthScaleCourt(5.5)},${props.heightScale(25)})`

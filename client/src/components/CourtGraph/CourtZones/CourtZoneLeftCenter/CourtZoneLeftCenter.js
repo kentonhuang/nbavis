@@ -27,7 +27,10 @@ const CourtZoneLeftCenter = (props) => {
         heightScale={props.heightScale}
         zone='Left Center'
         dist='16-24 Feet'
-        data={props.data['24+']}
+        colors={props.colors}
+        colors2={props.colors2}
+        data={props.data['16-24']}
+        leagueAvgStats={props.leagueAvgStats['16-24']}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}
@@ -43,6 +46,9 @@ const CourtZoneLeftCenter = (props) => {
         zone='Left Center'
         dist='24+ Feet'
         data={props.data['24+']}
+        leagueAvgStats={props.leagueAvgStats['24+']}
+        colors={props.colors}
+        colors2={props.colors2}
         onMouseMove={(e, bool, data) => {
           props.onMouseMove(e, bool, data);
         }}

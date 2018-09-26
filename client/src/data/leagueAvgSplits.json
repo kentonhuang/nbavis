@@ -1,0 +1,182 @@
+[
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Above the Break 3",
+    "shotZoneArea": "Back Court(BC)",
+    "shotZoneRange": "Back Court Shot",
+    "fga": 54,
+    "fgm": 3,
+    "fgPct": 0.056
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Above the Break 3",
+    "shotZoneArea": "Center(C)",
+    "shotZoneRange": "24+ ft.",
+    "fga": 15226,
+    "fgm": 5476,
+    "fgPct": 0.36
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Above the Break 3",
+    "shotZoneArea": "Left Side Center(LC)",
+    "shotZoneRange": "24+ ft.",
+    "fga": 20498,
+    "fgm": 7292,
+    "fgPct": 0.356
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Above the Break 3",
+    "shotZoneArea": "Right Side Center(RC)",
+    "shotZoneRange": "24+ ft.",
+    "fga": 19341,
+    "fgm": 6859,
+    "fgPct": 0.355
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Backcourt",
+    "shotZoneArea": "Back Court(BC)",
+    "shotZoneRange": "Back Court Shot",
+    "fga": 524,
+    "fgm": 5,
+    "fgPct": 0.01
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "In The Paint (Non-RA)",
+    "shotZoneArea": "Center(C)",
+    "shotZoneRange": "8-16 ft.",
+    "fga": 11317,
+    "fgm": 4719,
+    "fgPct": 0.417
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "In The Paint (Non-RA)",
+    "shotZoneArea": "Center(C)",
+    "shotZoneRange": "Less Than 8 ft.",
+    "fga": 18037,
+    "fgm": 6921,
+    "fgPct": 0.384
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "In The Paint (Non-RA)",
+    "shotZoneArea": "Left Side(L)",
+    "shotZoneRange": "8-16 ft.",
+    "fga": 1942,
+    "fgm": 773,
+    "fgPct": 0.398
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "In The Paint (Non-RA)",
+    "shotZoneArea": "Right Side(R)",
+    "shotZoneRange": "8-16 ft.",
+    "fga": 1948,
+    "fgm": 788,
+    "fgPct": 0.405
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Left Corner 3",
+    "shotZoneArea": "Left Side(L)",
+    "shotZoneRange": "24+ ft.",
+    "fga": 8170,
+    "fgm": 3133,
+    "fgPct": 0.383
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Center(C)",
+    "shotZoneRange": "8-16 ft.",
+    "fga": 2460,
+    "fgm": 1042,
+    "fgPct": 0.424
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Center(C)",
+    "shotZoneRange": "16-24 ft.",
+    "fga": 7197,
+    "fgm": 3007,
+    "fgPct": 0.418
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Left Side Center(LC)",
+    "shotZoneRange": "16-24 ft.",
+    "fga": 6596,
+    "fgm": 2612,
+    "fgPct": 0.396
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Left Side(L)",
+    "shotZoneRange": "16-24 ft.",
+    "fga": 2511,
+    "fgm": 994,
+    "fgPct": 0.396
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Left Side(L)",
+    "shotZoneRange": "8-16 ft.",
+    "fga": 6400,
+    "fgm": 2575,
+    "fgPct": 0.402
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Right Side Center(RC)",
+    "shotZoneRange": "16-24 ft.",
+    "fga": 6809,
+    "fgm": 2662,
+    "fgPct": 0.391
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Right Side(R)",
+    "shotZoneRange": "16-24 ft.",
+    "fga": 2316,
+    "fgm": 903,
+    "fgPct": 0.39
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Mid-Range",
+    "shotZoneArea": "Right Side(R)",
+    "shotZoneRange": "8-16 ft.",
+    "fga": 6047,
+    "fgm": 2476,
+    "fgPct": 0.409
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Restricted Area",
+    "shotZoneArea": "Center(C)",
+    "shotZoneRange": "Less Than 8 ft.",
+    "fga": 66875,
+    "fgm": 42188,
+    "fgPct": 0.631
+  },
+  {
+    "gridType": "League Averages",
+    "shotZoneBasic": "Right Corner 3",
+    "shotZoneArea": "Right Side(R)",
+    "shotZoneRange": "24+ ft.",
+    "fga": 7440,
+    "fgm": 3007,
+    "fgPct": 0.404
+  }
+]

@@ -17,10 +17,8 @@ const Ul = styled.ul`
 
 const Section = styled.section`
   width: 400px;
-  height: 400px;
+  height: 450px;
   overflow: auto;
-  margin-top: 30px;
-  margin-left: 40px;
   display: inline-block;
 `
 
@@ -59,7 +57,7 @@ class PlayerList extends Component {
 
   render() {
     return (
-      <Section className="col-md-3">
+      <Section className="col-2" style={{paddingLeft: '5px'}}>
         <Input
           type="text"
           placeholder="find player" 
