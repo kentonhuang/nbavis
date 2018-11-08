@@ -159,7 +159,7 @@ class CourtVisualization extends Component {
           text2={toolTip.data.dist}
           value={`${toolTip.data.data.made}/${toolTip.data.data.shots} (${toolTip.data.data.percentage}%)`}
         />
-        <svg style={{width: '450', height: '400'}} viewBox="0 0 611 500">
+        <svg style={{width: '500', height: '450'}} viewBox="0 0 611 500">
         <CourtZones 
           courtWidth={this.state.COURT_WIDTH}
           courtHeight={this.state.COURT_HEIGHT}
